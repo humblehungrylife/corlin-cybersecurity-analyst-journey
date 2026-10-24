@@ -1,66 +1,111 @@
-# Week 1 - Reviewing Azure Governance with Evidence Discipline
+# Week 01 — Investigating Azure Resource Governance and Deployment Activity
 
-**Status: Redacted learning reflection based on learner notes. Tenant findings have not been independently verified for publication.**
+**Mad Hat Labs | Chapter 1: The Blueprint**
+
+**Status:** Training investigation completed; public case study based on learner notes and retrospective documentation.  
+**Scenario role:** On-call Azure investigator in the exercise narrative.  
+**Actual access:** Reader.  
+**Environment:** Live multi-user Azure training tenant. **Not production experience.**
 
 ## Scenario
 
-The training exercise involved reviewing Azure resource organization and governance. My goal was to understand how metadata and available deployment records support an investigation, and how to communicate concerns without treating assumptions as findings.
+The exercise presented a temporary deployment that required a governance review. In the scenario, a junior team member had provisioned a test environment, and the investigator was asked to assess resource organization, configuration, and deployment activity using read-only access.
 
-The exact target, lab outcome, and solution are deliberately withheld. This report explains learning without providing a mission walkthrough.
+My objective was to understand what the available information supported, identify concerns requiring follow-up, and document recommendations without overstating the evidence. The scenario's job title and events describe a training narrative, not employment responsibilities or a real organizational incident.
 
 ## Environment and scope
 
-- Platform: Microsoft Azure.
-- Setting: live multi-user Azure training tenant provided through Mad Hat Labs.
-- Access: Reader access; visibility depends on assigned scope and available records.
-- Review areas recorded in my notes: resource organization, tags, deployment information, and governance controls.
-- Activity: read-only learning. No production responsibility, exploitation, configuration changes, or remediation is claimed.
+| Component | Description |
+| --- | --- |
+| Platform | Microsoft Azure |
+| Setting | Live multi-user Azure training tenant through Mad Hat Labs |
+| Access | Reader within the assigned training scope |
+| Primary tool | Azure Portal |
+| Review areas | Resource organization, tags, configuration, deployment history, and governance controls |
+| Activity limits | Observation and documentation; no exploitation, configuration changes, or remediation |
 
-## Investigation reflection
+The investigation is described at a general level. Exact targets, configuration outcomes that answer the mission, and a reproducible solution sequence are withheld.
 
-My original notes refer to reviewing resource organization, ownership metadata, deployment information, and policy behavior. Exact names, values, navigation sequences, and lab-specific outcomes are omitted to protect the exercise.
+## Investigation
 
-The transferable method is to define the question, record the scope and source of each observation, distinguish metadata from corroborated evidence, and identify what further evidence is needed before reaching a security conclusion. Deployment history can contribute context, but it should not be treated as a complete attribution record on its own.
+### Resource organization and ownership context
 
-## Evidence and uncertainty
+I reviewed resource organization and naming patterns as a way to identify items requiring closer examination. I also examined metadata for context about ownership, purpose, environment classification, and cost allocation.
 
-| Area | Public assessment | Evidence limitation |
+The practical lesson was to treat naming and tagging as investigative context. An unusual name does not prove unauthorized provisioning, and a tag does not independently establish who created or approved a resource. Lab-specific naming and tagging results are omitted.
+
+### Security configuration review
+
+My notes raised concerns about possible public network accessibility and storage shared-key authorization. These remain **unverified security concerns** in this public report: I have not established effective external reachability, successful authentication, accessible data, or compromise.
+
+A configuration review should distinguish what a setting appears to allow from what access is actually possible. Understanding impact would require further authorized validation of network restrictions, authentication, permissions, and relevant dependencies.
+
+### Deployment activity
+
+In my updated account of the exercise, I reviewed deployment history in the Azure Portal to understand the available provisioning records. My initial notes did not preserve a complete deployment analysis, so this retrospective description does not establish a verified timeline, deployment method, or responsible identity.
+
+I considered correlation with Azure Activity Log records as a follow-up method. **A completed Activity Log correlation is not documented or claimed here.** No timestamps, deployment identifiers, actor details, or mission-specific results are published.
+
+### Governance controls
+
+I reviewed governance configuration and how an assigned control's behavior and applicability affect its practical value. The learning point was to assess the relevant scope, configuration, exceptions, and enforcement context instead of assuming that the presence of a policy guarantees prevention.
+
+The exercise-specific policy value, failure mechanism, and final answer are withheld.
+
+## Evidence and confidence
+
+This is a learner-authored case study. The observations below have not been independently rechecked against the tenant for publication, and no supporting tenant screenshots or raw records are included.
+
+| Review area | Basis | What remains unresolved |
 | --- | --- | --- |
-| Governance review | Recorded in learner notes; outcome withheld | No permitted, independently checked tenant evidence is published |
-| Ownership and tagging | General learning: metadata supports accountability | Ownership, intent, and responsibility are not established here |
-| Possible public network access | Unverified concern in learner notes | Effective connectivity, access controls, and reachability were not validated |
-| Possible storage key access setting | Unverified concern in learner notes | No key possession, successful authentication, data access, or compromise was demonstrated |
-| Deployment history | Source notes do not contain a completed deployment analysis | Actor, method, chronology, and authorization remain unverified |
-| Impact or blast radius | Not established | Requires validated permissions, accessible data, connectivity, and dependencies |
+| Resource organization and metadata | Learner notes and retrospective account | Lab-specific results withheld; ownership and authorization not independently established |
+| Network accessibility | Concern recorded in learner notes | Effective reachability and data exposure unverified |
+| Storage authorization | Concern recorded in learner notes | Credential possession, successful access, and impact unverified |
+| Deployment history | Updated learner account; incomplete original notes | No substantiated chronology or attribution |
+| Governance controls | Learner account of the review | Exact configuration and mission outcome withheld |
+| Compromise or blast radius | Not established | No confirmed incident, exploitation, or measured impact |
 
-A naming inconsistency does not by itself establish shadow IT or compromise. Public network availability does not by itself establish anonymous data access. A configurable authentication option does not prove that credentials were exposed or used.
+## What surprised me and what I would improve
 
-## What was difficult or incomplete
+**Organization can support investigation.** Naming and ownership metadata can help frame useful questions, even though they cannot establish malicious intent.
 
-My notes mixed observations with possible explanations for another person's choices. Those explanations were not verified, so I do not attribute actions or intent to another learner or operator. My deployment-history notes were incomplete, and I cannot substantiate a timeline or identity from them.
+**Configuration and impact are different questions.** A potentially concerning setting needs context before it becomes a defensible security finding.
 
-The main improvement is evidence discipline: record what a view actually shows, its scope, and its limitations before proposing a cause. I have not invented a troubleshooting story or filled evidence gaps with a training debrief.
+**Governance requires more than checking that a control exists.** Applicability and behavior matter when assessing whether a control supports its intended purpose.
 
-## Findings and recommendations
+**My evidence capture needs to improve.** The initial deployment notes were incomplete. Next time, I would record permitted evidence, scope, and unanswered questions as I work, rather than reconstructing the investigation afterward.
 
-The defensible outcome is a learning reflection and questions for further authorized review, not a confirmed incident or verified vulnerability report.
+I also learned to remove unsupported explanations about another person's decisions. The exercise narrative provides background; it does not independently establish a real person's actions or intent.
 
-Recommendations for an authorized resource owner, subject to operational requirements:
+## Assessment and recommendations
 
-1. Review ownership metadata and governance expectations. Document approved exceptions and responsible owners.
-2. Validate effective network and authentication controls before deciding whether access should be restricted. Assess dependencies and test changes in an approved scope.
-3. Correlate available deployment records with activity and identity evidence before attributing a change. Document visibility gaps and distinguish recommendations from verified remediation.
+The review developed my ability to recognize governance questions and communicate potential risks. It did not establish a confirmed incident or independently verified vulnerability.
 
-These recommendations have not been implemented or tested by me in this report.
+Recommendations for an authorized resource owner:
+
+1. **Clarify ownership and provisioning expectations.** Document naming and metadata requirements, responsible owners, and approved exceptions.
+2. **Validate effective access before recommending changes.** Review network restrictions and authentication requirements, establish the operational need, and assess dependencies before restricting access.
+3. **Complete the change-history review.** Correlate available deployment and activity records before attributing actions or presenting a timeline.
+4. **Review governance applicability.** Evaluate scope, exceptions, intended behavior, and operational impact before proposing stronger enforcement.
+
+These are recommendations, not changes I implemented or verified.
 
 ## What I learned
 
-- Resource organization and metadata provide context but do not establish intent or authorization.
-- Governance controls must be evaluated in scope and operating context; exact lab configuration results are withheld.
-- Risk statements need evidence of effective access and impact, not just a concerning setting.
-- Next time, I would capture permitted evidence and unknowns as I work, especially for chronology and attribution.
-- A useful analyst report communicates uncertainty and gives an owner clear next steps.
+- Resource discovery and metadata review help an analyst ask better questions.
+- Configuration observations need context before supporting claims about exposure or impact.
+- Deployment records can contribute to a timeline, but attribution requires corroboration.
+- Governance effectiveness depends on applicability and configuration.
+- Clear reporting separates observations, hypotheses, missing evidence, and proposed actions.
 
-## Redaction statement
+## Reflection
 
-No flags, GUIDs, mission answers, identifying deployment or resource names, screenshots, raw logs, or credentials are included. Details are intentionally withheld, so readers cannot independently verify tenant observations from this public reflection.
+This exercise helped me bring Azure resource organization, configuration review, deployment records, and governance into one investigation. My strongest takeaway was that identifying something unusual is the beginning of analysis: the next task is to establish what the evidence supports and explain what still needs checking.
+
+## Training acknowledgment and disclosure
+
+Thank you to **Mad Hat Labs** for the training environment and practical learning exercise. This is an independent portfolio case study, not an official course publication or endorsement.
+
+The exercise briefing is summarized in my own words; the supplied course screenshot is not republished. No flags, GUIDs, mission answers, identifying deployment or resource names, credentials, raw tenant exports, or screenshots are included. Public detail is intentionally limited under the [publication policy](../../PUBLICATION-POLICY.md).
+
+**Experience classification: Live multi-user Azure training tenant, Reader access. Not production experience.**
