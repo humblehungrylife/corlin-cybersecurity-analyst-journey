@@ -30,7 +30,7 @@ The investigation is described at a general level. Exact targets, configuration 
 
 **Examined:** I reviewed the subscription's resource groups and compared naming patterns.
 
-**Found:** My notes record a naming inconsistency that warranted further review. The target and mission answer are withheld.
+**Found:** I record a naming inconsistency that warranted further review. The target and mission answer are withheld.
 
 **Concluded:** Naming patterns help identify resources needing attention; an unusual name alone does not establish unauthorized activity.
 
@@ -54,7 +54,7 @@ The investigation is described at a general level. Exact targets, configuration 
 
 **Examined:** I reviewed Azure Policy configuration and parameters.
 
-**Found:** My notes record a governance configuration relevant to the exercise. The parameter, value, and mission outcome are withheld.
+**Found:** I record a governance configuration relevant to the exercise. The parameter, value, and mission outcome are withheld.
 
 **Concluded:** A policy's presence alone does not establish effective enforcement. Its scope, configuration, and exceptions need context.
 
