@@ -96,9 +96,9 @@ I learned to use Azure resource organization, metadata, deployment records, and 
 
 ## What surprised me and what I would improve
 
-My main challenge was separating configuration observations from conclusions about impact. Naming and tags helped me ask questions, but could not establish intent or ownership.
+There were no major surprises in this exercise. My main learning curve was getting comfortable with the investigation steps and navigating the Azure Portal.
 
-My deployment notes were incomplete. Next time, I would capture permitted evidence, scope, timestamps, and unanswered questions during the investigation rather than reconstructing them later.
+Next time, I would document my observations as I work and become more familiar with the relevant menus to make my investigation more efficient.
 
 ## Recommendations
 
