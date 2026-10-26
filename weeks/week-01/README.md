@@ -9,9 +9,7 @@
 
 ## Scenario
 
-The exercise presented a temporary deployment that required a governance review. In the scenario, a junior team member had provisioned a test environment, and the investigator was asked to assess resource organization, configuration, and deployment activity using read-only access.
-
-My objective was to understand what the available information supported, identify concerns requiring follow-up, and document recommendations without overstating the evidence. The scenario's job title and events describe a training narrative, not employment responsibilities or a real organizational incident.
+The first week of Mad Hat Labs introduced Microsoft Azure's resource hierarchy, naming conventions, tagging, deployment records, and governance policies, followed by a practical investigation. The scenario involved an inexperienced intern who deployed an experimental Azure environment without fully following organizational standards. Working with Reader access, my objective was to investigate the resources, identify potential governance failures, and document my findings while keeping all mission-specific answers confidential.
 
 ## Environment and scope
 
@@ -22,11 +20,51 @@ My objective was to understand what the available information supported, identif
 | Access | Reader within the assigned training scope |
 | Primary tool | Azure Portal |
 | Review areas | Resource organization, tags, configuration, deployment history, and governance controls |
-| Activity limits | Observation and documentation; no exploitation, configuration changes, or remediation |
+| Activity limits | Observation and documentation|
 
 The investigation is described at a general level. Exact targets, configuration outcomes that answer the mission, and a reproducible solution sequence are withheld.
 
 ## Investigation
+Stage 1 — Resource Organization and Naming Conventions
+
+Examined: Used the Azure Portal search bar to locate the assigned subscription, then reviewed its resource groups and compared their names against the organization's naming conventions.
+
+Found: Identified an inconsistency in the resource naming pattern that warranted further investigation.
+
+Concluded: Pattern recognition helps analysts identify potentially misconfigured or undocumented resources, including possible shadow IT. However, unusual naming alone does not establish unauthorized activity.
+
+Stage 2 — Resource Tags and Cost Management
+
+Examined: Opened the relevant resource's Tags section to review ownership, environment classification, and cost-related metadata.
+
+Found: The available metadata provided operational context, while highlighting the importance of consistent tagging and cost allocation.
+
+Concluded: Tags support accountability, cost management, and security investigations but do not independently establish who created or authorized a resource.
+
+Stage 3 — Deployment History and Resource Investigation
+
+Examined: Navigated to the relevant resource group through the Azure Portal and explored its deployment history.
+
+Found: Located the deployment records associated with the resource group, providing a starting point for understanding how its infrastructure was provisioned.
+
+Concluded: Deployment history supports infrastructure investigations, but a complete timeline and reliable attribution may require additional evidence from Azure Activity Logs.
+
+Stage 4 — Azure Policy and Governance Controls
+
+Examined: Navigated to Azure Policy and reviewed the relevant policy assignment, including its configuration and parameters.
+
+Found: Identified a configuration relevant to understanding the observed naming inconsistency. The mission-specific parameter and value remain confidential.
+
+Concluded: An assigned policy does not necessarily guarantee active enforcement. Additional organizational context would be needed to determine whether its configuration was intentional or an oversight.
+---
+
+Overall Finding
+
+This investigation demonstrated how Azure's resource hierarchy, naming conventions, tagging, deployment history, and governance policies work together to support cloud security investigations.
+
+The key takeaway was understanding how to navigate an unfamiliar environment, recognize anomalies, investigate potential governance failures, and evaluate security controls. Most importantly, I learned that identifying an unusual configuration is only the beginning; understanding why it occurred and supporting conclusions with evidence is what makes an investigation meaningful.
+
+In accordance with Mad Hat Labs' spoiler policy, all mission-specific answers, identifiers, and configuration values have been withheld.
 
 ### Resource organization and ownership context
 
@@ -53,18 +91,41 @@ I reviewed governance configuration and how an assigned control's behavior and a
 The exercise-specific policy value, failure mechanism, and final answer are withheld.
 
 ## Evidence and confidence
+The following screenshots document my investigative approach within the Mad Hat Labs Azure training environment. Mission-specific findings and identifiers are intentionally withheld.
 
-This is a learner-authored case study. The observations below have not been independently rechecked against the tenant for publication, and no supporting tenant screenshots or raw records are included.
+Evidence 01 — Azure Resource Hierarchy
 
-| Review area | Basis | What remains unresolved |
-| --- | --- | --- |
-| Resource organization and metadata | Learner notes and retrospective account | Lab-specific results withheld; ownership and authorization not independently established |
-| Network accessibility | Concern recorded in learner notes | Effective reachability and data exposure unverified |
-| Storage authorization | Concern recorded in learner notes | Credential possession, successful access, and impact unverified |
-| Deployment history | Updated learner account; incomplete original notes | No substantiated chronology or attribution |
-| Governance controls | Learner account of the review | Exact configuration and mission outcome withheld |
-| Compromise or blast radius | Not established | No confirmed incident, exploitation, or measured impact |
+Stage 1 | Management Groups
 
+Reviewed Azure's organizational hierarchy to understand the relationship between management groups and subscriptions.
+
+Confidence: High — hierarchy visible in the screenshot.
+
+Evidence 02 — Resource Naming and Location
+
+Stage 1–2 | Resource Groups
+
+Examined resource group naming patterns and associated locations to identify inconsistencies and understand resource organization.
+
+Confidence: High — visible resource information; investigation-specific findings withheld.
+
+Evidence 03 — Deployment Investigation
+
+Stage 3 | Resource Group Overview
+
+Located the relevant resource group and identified the navigation options for examining deployment activity and associated configurations.
+
+Confidence: High for navigation; deployment details and attribution not independently verified.
+
+Evidence 04 — Governance and Policy Review
+
+Stage 4 | Azure Policy
+
+Reviewed policy assignments and parameters to understand how governance controls influence resource deployment and compliance.
+
+Confidence: Based on investigation notes; mission-specific configuration withheld.
+
+Evidence limitations: Screenshots demonstrate navigation and investigative methodology, not confirmed exploitation or compromise. No verified attack, responsible identity, or measurable blast radius was established. All sensitive identifiers and mission answers must be redacted before publication.
 ## What surprised me and what I would improve
 
 **Organization can support investigation.** Naming and ownership metadata can help frame useful questions, even though they cannot establish malicious intent.
