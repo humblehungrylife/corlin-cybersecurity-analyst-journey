@@ -104,18 +104,18 @@ These are recommendations, not changes I implemented.
 
 ## Evidence and screenshots
 
-The five Azure Portal screenshots are provided as **redacted, clickable links**, not inline images. Gray overlays conceal answer-bearing text; the captures are cropped to limit exposure of account and tenant identifiers. They support configuration observations only, not the entire scenario chronology.
+Five redacted Azure Portal evidence images have been prepared. To avoid cluttering the page and prevent publishing unreviewed binary files, the evidence links are pending upload. The images support configuration observations only, not the entire scenario chronology.
 
-- [Evidence 01 — Initial application review](images/01-initial-access.webp)
-- [Evidence 02 — Application credential configuration](images/02-application-credential.webp)
-- [Evidence 03 — Secondary application review](images/03-secondary-application.webp)
-- [Evidence 04 — API authorization settings](images/04-api-authorization.webp)
-- [Evidence 05 — Redirect configuration](images/05-redirect-configuration.webp)
+- Evidence 01 — Initial application review (publication pending)
+- Evidence 02 — Application credential configuration (publication pending)
+- Evidence 03 — Secondary application review (publication pending)
+- Evidence 04 — API authorization settings (publication pending)
+- Evidence 05 — Redirect configuration (publication pending)
 
 ## Training acknowledgment and disclosure
 
 Thank you to **Mad Hat Labs** for the practical training environment. This is my independent learning portfolio, not an official course publication or endorsement.
 
-The supplied course instruction screenshot is not republished. The five Azure evidence images are redacted presentation copies; flags, mission answers, identifying resource and deployment names, credentials, raw exports, and policy parameter values are excluded. See the [publication policy](../../PUBLICATION-POLICY.md).
+The supplied course instruction screenshot is not republished. The five Azure evidence images are prepared redacted presentation copies, pending publication; flags, mission answers, identifying resource and deployment names, credentials, raw exports, and policy parameter values are excluded. See the [publication policy](../../PUBLICATION-POLICY.md).
 
 **Experience classification: Live multi-user Azure training tenant, Reader access. Not production experience.**
