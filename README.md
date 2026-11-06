@@ -4,19 +4,19 @@ A 12-week portfolio documenting my development toward an entry-level cybersecuri
 
 ## About this portfolio
 
-I am an early-career learner. Weeks 1 and 2 took place in a **live multi-user Azure training tenant with Reader access**. This is training experience, not production employment or evidence of production administration. No exploitation, configuration changes, or completed remediation is claimed.
+I am an early-career learner. Weeks 1–3 involved a **live multi-user Azure training tenant**, beginning with restricted Reader-level access. Week 3 also included authorized, time-limited activation of an eligible Azure resource role. This is training experience, not production employment or evidence of production administration. No exploitation, configuration changes, or completed remediation is claimed.
 
 Thank you to **Mad Hat Labs** for the practical training environment and investigative learning approach. This is my independent learning portfolio, not an official Mad Hat Labs publication or an endorsement.
 
 ## Roadmap
 
-Weeks 1 and 2 are redacted investigations based on my notes and the training exercises, with evidence limitations stated. Weeks 3-12 remain proposed topics and future templates. They are not completed achievements or claims about the Mad Hat curriculum.
+Weeks 1–3 are completed, independently written training case studies with evidence limitations stated. Weeks 4–12 remain proposed topics and future templates, not completed achievements or confirmed Mad Hat curriculum.
 
 | Week | Focus | Status |
 | --- | --- | --- |
 | [01](weeks/week-01/README.md) | Azure governance: evidence and limitations | Redacted learning reflection |
 | [02](weeks/week-02/README.md) | Microsoft Entra ID: identity compromise and app persistence | Completed training investigation |
-| [03](weeks/week-03/README.md) | Identity and access review | Future template |
+| [03](weeks/week-03/README.md) | Azure RBAC privilege audit: IAM, CLI, KQL and PIM | Completed training audit |
 | [04](weeks/week-04/README.md) | Phishing triage and reporting | Future template |
 | [05](weeks/week-05/README.md) | Authentication log analysis | Future template |
 | [06](weeks/week-06/README.md) | Network exposure review | Future template |
@@ -35,4 +35,4 @@ See the [investigation template](templates/investigation.md) and [publication po
 
 ## Public evidence policy
 
-No flags, GUIDs, mission answers, identifying resource or deployment names, credentials, raw tenant exports, or unredacted screenshots are included. Lab-specific policy outcomes and solution sequences are withheld. Week 1 includes redacted presentation images. Week 2 evidence links are reserved for separately published, redacted screenshots.
+No flags, GUIDs, mission answers, identifying resource or deployment names, credentials, raw tenant exports, or unredacted screenshots are included. Lab-specific policy outcomes and solution sequences are withheld. Week 1 and Week 2 use redacted evidence images. Week 3 provides sanitized text-based methodology and evidence references; raw role exports and unredacted screenshots remain private.
