@@ -92,12 +92,16 @@ The practical lesson: assess permissions by **role, scope, and duration**, then 
 
 ## Evidence and methodology references
 
-These are **sanitized, text-based references**, not raw tenant exports or unredacted screenshots. Detailed private screenshots remain outside this public repository.
+The following **clickable evidence images** are intentionally linked instead of embedded inline. Identifiers and exercise-specific text are permanently obscured in the presentation copies. The KQL illustration and aggregated Owner graphic are **reconstructions**, not direct screenshots or independently verified portal exports. Original raw evidence remains private.
 
-- [E01 — Role-assignment export structure and redaction notes](evidence/role-assignment-schema.md)
-- [E02 — Azure CLI / PowerShell command walkthrough](methods/cli-powershell.md)
-- [E03 — Azure Resource Graph / KQL methodology](evidence/kql-method.md)
-- [E04 — PIM eligibility and activation observations](evidence/pim-review.md)
+- [E01 — Portal role-assignment export access limitation (redacted screenshot)](images/e01-portal-export-redacted.jpg)
+- [E02 — Azure CLI role-assignment view (redacted screenshot)](images/e02-cli-role-summary-redacted.jpg)
+- [E03 — KQL query-method illustration (recreated, not a screenshot)](images/e03-kql-example-recreated.jpg)
+- [E04 — PIM role-activation request (redacted screenshot)](images/e04-pim-activation-redacted.jpg)
+- [E04b — Time-bound active PIM assignment (cropped screenshot)](images/e04b-pim-active-status-redacted.jpg)
+- [E05 — Owner assignments by scope (aggregated reconstruction)](images/e05-owner-scopes-aggregated.jpg)
+
+Supporting explanations: [export column structure](evidence/role-assignment-schema.md) · [PowerShell command walkthrough](methods/cli-powershell.md) · [KQL methodology](evidence/kql-method.md) · [PIM review](evidence/pim-review.md).
 
 ## Training acknowledgment and disclosure
 
