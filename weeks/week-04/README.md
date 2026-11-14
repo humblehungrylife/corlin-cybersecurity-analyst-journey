@@ -39,6 +39,10 @@ For each area, I recorded the observation, compared it with the healthy baseline
 
 **Verified by:** Comparing the overview and placement of the new deployment with the healthy service.
 
+![AI-assisted redaction copy of the healthy placement baseline](images/01-healthy-placement-redacted.png)
+
+*Healthy comparison: AI-assisted redaction copy for navigation context only; not pixel-exact source evidence.*
+
 **Why it matters:** A workload placed far from its actual dependencies can add latency, outbound data-transfer charges, residency concerns, and operational inconsistency.
 
 **Evidence limit:** The new service's compute plan and its directly associated storage were co-located. I therefore treated cross-region traffic as a dependency risk to verify, not as a proven charge on every request.
@@ -50,6 +54,10 @@ For each area, I recorded the observation, compared it with the healthy baseline
 **Observed:** The new application had no managed identity attached, while the healthy baseline used one.
 
 **Verified by:** Comparing the identity configuration of both services.
+
+![AI-assisted redaction copy of the healthy managed-identity baseline](images/02-healthy-identity-redacted.png)
+
+*Healthy comparison: AI-assisted redaction copy for navigation context only; not pixel-exact source evidence.*
 
 **Why it matters:** Without managed identity, an application commonly relies on a stored connection string, key, or application secret. Those values can leak through code, settings, logs, images, or deployment notes.
 
@@ -76,6 +84,10 @@ For each area, I recorded the observation, compared it with the healthy baseline
 **Observed:** The new Function App accepted public network traffic without an access-restriction baseline. The healthy service used deny-by-default behavior.
 
 **Verified by:** Comparing the inbound networking and access-restriction configuration of both services.
+
+![AI-assisted redaction copy of the healthy deny-by-default network baseline](images/03-healthy-network-redacted.png)
+
+*Healthy comparison: AI-assisted redaction copy for navigation context only; not pixel-exact source evidence.*
 
 **Why it matters:** A scheduled workload that does not require inbound requests should not expose an unnecessary internet-facing path.
 
@@ -121,9 +133,15 @@ These are recommendations, not changes I implemented or verified.
 
 ## Evidence and publication limits
 
-I retained the original screenshots and lab-specific evidence privately. They are not published because they contain target names, identifiers, endpoints, exact answers, and clues that could reproduce the mission solution.
+I retained the original screenshots and lab-specific evidence privately. The images published here are AI-assisted redaction copies created only to show navigation and comparison context. They are not pixel-exact source evidence and must not be used to reconstruct mission answers.
 
-No flags, GUIDs, subscription or tenant identifiers, identity names, rule names, container names, live URLs, raw exports, credentials, or unredacted screenshots are included here. One nonfunctional URL pattern is retained to explain the validation method without revealing the target. The unauthenticated validation is described only at the level needed to explain the evidence standard.
+No flags, GUIDs, subscription or tenant identifiers, identity names, rule names, container names, live URLs, raw exports, credentials, original screenshots, or unredacted screenshots are included here. One nonfunctional URL pattern is retained to explain the validation method without revealing the target. The unauthenticated validation is described only at the level needed to explain the evidence standard.
+
+### Redacted evidence comparison
+
+![AI-assisted redaction copy summarizing the unhealthy deployment evidence](images/04-unhealthy-evidence-redacted.png)
+
+*Unhealthy deployment summary: AI-assisted redaction copy for comparison context only; not pixel-exact source evidence.*
 
 ## What I learned
 
@@ -135,10 +153,6 @@ No flags, GUIDs, subscription or tenant identifiers, identity names, rule names,
 - Active exposure should be contained before lower-urgency configuration hygiene is addressed.
 - A technical review is most useful when it ends with a clear priority decision a nontechnical leader can act on.
 
-## Interview-ready summary
-
-I reviewed an Azure compute deployment before production promotion by comparing it with a known-good baseline across regional placement, workload identity, data exposure, and inbound access. I directly validated a narrowly scoped anonymous read exposure from an unauthenticated session, separated proven impact from unverified risk, and produced a severity-ranked remediation plan that prioritized active exposure over configuration hygiene.
-
 ## Training acknowledgment and disclosure
 
 Thank you to **Mad Hat Labs** for the practical training environment and deployment-review exercise. This is my independent portfolio reflection, not an official course publication or endorsement.
@@ -147,3 +161,6 @@ The scenario is summarized in my own words. Mission answers, target identifiers,
 
 **Experience classification: Live multi-user Azure training tenant, Reader access. Not production experience.**
 
+## End note
+
+[Interview-ready summary — Week 4 Lab Work and Industry Thinking](#priority-decision)
