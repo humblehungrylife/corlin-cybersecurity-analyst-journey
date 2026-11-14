@@ -39,9 +39,7 @@ For each area, I recorded the observation, compared it with the healthy baseline
 
 **Verified by:** Comparing the overview and placement of the new deployment with the healthy service.
 
-![AI-assisted redaction copy of the healthy placement baseline](images/01-healthy-placement-redacted.png)
-
-*Healthy comparison: AI-assisted redaction copy for navigation context only; not pixel-exact source evidence.*
+**Redacted evidence:** [View the healthy placement comparison](images/01-healthy-placement-redacted.png)
 
 **Why it matters:** A workload placed far from its actual dependencies can add latency, outbound data-transfer charges, residency concerns, and operational inconsistency.
 
@@ -55,9 +53,7 @@ For each area, I recorded the observation, compared it with the healthy baseline
 
 **Verified by:** Comparing the identity configuration of both services.
 
-![AI-assisted redaction copy of the healthy managed-identity baseline](images/02-healthy-identity-redacted.png)
-
-*Healthy comparison: AI-assisted redaction copy for navigation context only; not pixel-exact source evidence.*
+**Redacted evidence:** [View the healthy managed-identity comparison](images/02-healthy-identity-redacted.png)
 
 **Why it matters:** Without managed identity, an application commonly relies on a stored connection string, key, or application secret. Those values can leak through code, settings, logs, images, or deployment notes.
 
@@ -85,9 +81,7 @@ For each area, I recorded the observation, compared it with the healthy baseline
 
 **Verified by:** Comparing the inbound networking and access-restriction configuration of both services.
 
-![AI-assisted redaction copy of the healthy deny-by-default network baseline](images/03-healthy-network-redacted.png)
-
-*Healthy comparison: AI-assisted redaction copy for navigation context only; not pixel-exact source evidence.*
+**Redacted evidence:** [View the healthy deny-by-default network comparison](images/03-healthy-network-redacted.png)
 
 **Why it matters:** A scheduled workload that does not require inbound requests should not expose an unnecessary internet-facing path.
 
