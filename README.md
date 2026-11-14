@@ -35,5 +35,5 @@ See the [investigation template](templates/investigation.md) and [publication po
 
 ## Public evidence policy
 
-No flags, GUIDs, mission answers, identifying resource or deployment names, credentials, raw tenant exports, or unredacted screenshots are included. Lab-specific policy outcomes and solution sequences are withheld. Week 1 and Week 2 use redacted evidence images. Week 3 provides sanitized text-based methodology and evidence references. Week 4 is a text-only, redacted deployment-review report; its raw screenshots and full evidence document remain private.
+No flags, GUIDs, mission answers, identifying resource or deployment names, credentials, raw tenant exports, or unredacted screenshots are included. Lab-specific policy outcomes and solution sequences are withheld. Week 1 and Week 2 use redacted evidence images. Week 3 provides sanitized text-based methodology and evidence references. Week 4 uses AI-assisted redaction copies for navigation and comparison context; its original screenshots and full evidence document remain private.
 
