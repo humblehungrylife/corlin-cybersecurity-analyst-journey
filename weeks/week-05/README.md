@@ -47,7 +47,9 @@ Confirm with the network owner whether Private Endpoint traffic bypassing centra
 
 ## Evidence and interactive trace
 
-**[Interactive five-hop network trace — open the GitHub Pages walkthrough](https://humblehungrylife.github.io/corlin-cybersecurity-analyst-journey/week-05/interactive-trace/)**
+**[Interactive five-hop trace — source files](interactive-trace/index.html)** · [GitHub Pages walkthrough (requires Pages activation)](https://humblehungrylife.github.io/corlin-cybersecurity-analyst-journey/week-05/interactive-trace/)
+
+**Deployment note:** The trace files are committed, but GitHub Pages is not yet enabled on this repository. The interactive page will become available only after GitHub Pages is configured to deploy via GitHub Actions and the workflow succeeds.
 
 The walkthrough animates a **conceptual reconstruction** of this case and offers one sanitized evidence illustration per hop. It is not connected to the training tenant, and it cannot display live packets.
 
