@@ -25,7 +25,7 @@ I investigated the configuration from the workload subnet to the storage service
 
 ### 3. THE ROUTE — Why can traffic bypass the appliance?
 
-**Checked:** The subnet-associated route table and its next-hop type. **Observed:** A default User-Defined Route (UDR) for \`0.0.0.0/0\` points toward a virtual appliance. **Meaning:** That route is useful for destinations that do not match a more-specific route. The Private Endpoint introduces a destination-specific \`/32\` route in the lab's routing model. Azure selects the longest matching prefix: \`/32\` outranks \`/0\` for this private destination, so the default appliance path is not selected.
+**Checked:** The subnet-associated route table and its next-hop type. **Observed:** A default User-Defined Route (UDR) for `0.0.0.0/0` points toward a virtual appliance. **Meaning:** That route is useful for destinations that do not match a more-specific route. The Private Endpoint introduces a destination-specific `/32` route in the lab's routing model. Azure selects the longest matching prefix: `/32` outranks `/0` for this private destination, so the default appliance path is not selected.
 
 ### 4. THE PRIVATE ENDPOINT — How does storage remain privately reachable?
 
@@ -37,13 +37,13 @@ I investigated the configuration from the workload subnet to the storage service
 
 ## The answer — Reply to the application team
 
-The application requests storage by hostname. Private DNS resolves the storage name to the Private Endpoint's private address in the workload network. Outbound internal traffic is compatible with the NSG rules. During route selection, the endpoint's more-specific \`/32\` path takes precedence over the \`0.0.0.0/0\` default route to the appliance. The configured private connection therefore explains how storage remains reachable without the default firewall path being selected.
+The application requests storage by hostname. Private DNS resolves the storage name to the Private Endpoint's private address in the workload network. Outbound internal traffic is compatible with the NSG rules. During route selection, the endpoint's more-specific `/32` path takes precedence over the `0.0.0.0/0` default route to the appliance. The configured private connection therefore explains how storage remains reachable without the default firewall path being selected.
 
 This was a **Reader-access configuration trace**, not a live packet capture or a verification of firewall log ingestion. I made no changes.
 
 ## What I would flag
 
-Confirm with the network owner whether Private Endpoint traffic bypassing centralized appliance inspection is **intended**. If inspection is required, review the supported Private Endpoint network policies, effective routes, and security design; do not assume that making a firewall route \`/32\` automatically fixes the architecture.
+Confirm with the network owner whether Private Endpoint traffic bypassing centralized appliance inspection is **intended**. If inspection is required, review the supported Private Endpoint network policies, effective routes, and security design; do not assume that making a firewall route `/32` automatically fixes the architecture.
 
 ## Evidence and interactive trace
 
@@ -57,12 +57,12 @@ The walkthrough animates a **conceptual reconstruction** of this case and offers
 - [Hop 4 — Private Endpoint review](evidence/hop-04-endpoint.svg)
 - [Hop 5 — Private DNS record review](evidence/hop-05-dns.svg)
 
-**Evidence limits:** The five visuals are redacted *reconstructions of portal configuration views*, not pixel-exact screenshots. Original screenshots remain private because they contain mission answers, resource identifiers, and tenant details. The lab provided the Private Endpoint \`/32\` route-selection explanation; no independent effective-route or packet-capture output is published. Screenshots and the page omit real source IPs, next-hop addresses, endpoint IPs, service names, subscription identifiers, and answer strings.
+**Evidence limits:** The five visuals are redacted *reconstructions of portal configuration views*, not pixel-exact screenshots. Original screenshots remain private because they contain mission answers, resource identifiers, and tenant details. The lab provided the Private Endpoint `/32` route-selection explanation; no independent effective-route or packet-capture output is published. Screenshots and the page omit real source IPs, next-hop addresses, endpoint IPs, service names, subscription identifiers, and answer strings.
 
 ## What I learned
 
 - Network Security Groups decide whether matching traffic is allowed; route tables decide the next hop; DNS identifies the destination address.
-- A broad \`/0\` UDR is **not useless**. More-specific matching routes can take precedence for selected destinations.
+- A broad `/0` UDR is **not useless**. More-specific matching routes can take precedence for selected destinations.
 - A Private Endpoint provides private connectivity but does not itself disable public network access on the service.
 - An inbound HTTPS exception is not evidence of an outbound storage connection.
 - Reader-level cloud access can support a useful, clearly qualified troubleshooting explanation without making changes.
