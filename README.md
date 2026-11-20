@@ -4,13 +4,13 @@ A 12-week portfolio documenting my development toward an entry-level cybersecuri
 
 ## About this portfolio
 
-I am an early-career learner. Weeks 1–4 involved a **live multi-user Azure training tenant**, beginning with restricted Reader-level access. Week 3 also included authorized, time-limited activation of an eligible Azure resource role. Week 4 focused on a Reader-level pre-production deployment review. This is training experience, not production employment or evidence of production administration. No exploitation, configuration changes, or completed remediation is claimed.
+I am an early-career learner. Weeks 1–5 involved a **live multi-user Azure training tenant**, beginning with restricted Reader-level access. Week 3 also included authorized, time-limited activation of an eligible Azure resource role. Week 4 focused on a Reader-level pre-production deployment review; Week 5 focused on a Reader-level Azure network-path investigation. This is training experience, not production employment or evidence of production administration. No exploitation, configuration changes, or completed remediation is claimed.
 
 Thank you to **Mad Hat Labs** for the practical training environment and investigative learning approach. This is my independent learning portfolio, not an official Mad Hat Labs publication or an endorsement.
 
 ## Roadmap
 
-Weeks 1–4 are completed, independently written training case studies with evidence limitations stated. Weeks 5–12 remain proposed topics and future templates, not completed achievements or confirmed Mad Hat curriculum.
+Weeks 1–5 are completed, independently written training case studies with evidence limitations stated. Weeks 6–12 remain proposed topics and future templates, not completed achievements or confirmed Mad Hat curriculum.
 
 | Week | Focus | Status |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ Weeks 1–4 are completed, independently written training case studies with evid
 | [02](weeks/week-02/README.md) | Microsoft Entra ID: identity compromise and app persistence | Completed training investigation |
 | [03](weeks/week-03/README.md) | Azure RBAC privilege audit: IAM, CLI, KQL and PIM | Completed training audit |
 | [04](weeks/week-04/README.md) | Azure pre-production deployment review | Completed redacted deployment review |
-| [05](weeks/week-05/README.md) | Authentication log analysis | Future template |
+| [05](weeks/week-05/README.md) | Azure virtual networking: five-hop packet-path investigation | Completed Reader-level network trace |
 | [06](weeks/week-06/README.md) | Network exposure review | Future template |
 | [07](weeks/week-07/README.md) | Vulnerability prioritization | Future template |
 | [08](weeks/week-08/README.md) | Endpoint alert triage | Future template |
@@ -35,5 +35,4 @@ See the [investigation template](templates/investigation.md) and [publication po
 
 ## Public evidence policy
 
-No flags, GUIDs, mission answers, identifying resource or deployment names, credentials, raw tenant exports, or unredacted screenshots are included. Lab-specific policy outcomes and solution sequences are withheld. Week 1 and Week 2 use redacted evidence images. Week 3 provides sanitized text-based methodology and evidence references. Week 4 uses AI-assisted redaction copies for navigation and comparison context; its original screenshots and full evidence document remain private.
-
+No flags, GUIDs, mission answers, identifying resource or deployment names, credentials, raw tenant exports, or unredacted screenshots are included. Lab-specific policy outcomes and solution sequences are withheld. Weeks 1 and 2 use redacted evidence images. Week 3 provides sanitized text-based methodology and evidence references. Week 4 uses AI-assisted redaction copies; its original screenshots and full evidence document remain private. Week 5 uses explicitly labeled, sanitized visual reconstructions and an educational path simulator, not raw screenshots or a packet capture.

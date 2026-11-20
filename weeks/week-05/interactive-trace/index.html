@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Week 05 | Azure Private Endpoint Network Trace</title>
+<meta name="description" content="An educational, sanitized Azure network-path reconstruction from an authorized Reader-level training investigation.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+<p class="eyebrow">MAD HAT LABS / WEEK 05 / ORIGINAL LEARNING RECONSTRUCTION</p>
+<h1>Network Like an Operative</h1>
+<p class="lead">Follow how a workload can resolve a storage hostname and connect over a Private Endpoint while a default route points at a firewall appliance. Inspect each sanitized configuration illustration as the trace advances.</p>
+<p><a href="https://github.com/humblehungrylife/corlin-cybersecurity-analyst-journey/blob/main/weeks/week-05/README.md">← Back to the Week 5 ticket reply</a></p>
+<div class="notice"><strong>Training simulation — not live traffic.</strong> Addresses and names are deliberately withheld. The illustrations are redacted recreations, not original screenshots. DNS lookup precedes the data connection and is <em>not</em> a packet-forwarding hop.</div>
+<section class="panel" aria-label="Network diagram">
+<h2>Conceptual network flow</h2>
+<p class="path-label">First: hostname lookup via linked private DNS → Then: data packet through security and routing controls</p>
+<div class="diagram">
+<button class="node dns-node" data-stage="1"><strong>Private DNS lookup</strong><small>Storage hostname → Private Endpoint address</small></button>
+<button class="node" data-stage="0"><strong>1. App subnet</strong><small>Origin /24 · VNet /16</small></button>
+<button class="node" data-stage="2"><strong>2. NSG</strong><small>Outbound security evaluation</small></button>
+<button class="node" data-stage="3"><strong>3. Route table</strong><small>Endpoint /32 versus firewall /0</small></button>
+<button class="node" data-stage="4"><strong>4. Private Endpoint</strong><small>NIC in private subnet</small></button>
+<button class="node" data-stage="5"><strong>5. Storage</strong><small>Private Link destination</small></button>
+</div>
+<div class="paths">
+<div class="route ok"><strong>Selected for this destination:</strong><br>More-specific /32 Private Endpoint system route</div>
+<div class="route off"><strong>Not selected for this destination:</strong><br>0.0.0.0/0 UDR → virtual inspection appliance</div>
+</div>
+</section>
+<section class="panel"><h2>Trace controller</h2>
+<div class="controls">
+<button class="action" id="send">▶ Send packet</button>
+<button class="action secondary" id="step">Step →</button>
+<button class="action secondary" id="reset">Reset</button>
+<span class="badge" id="counter" aria-live="polite">Ready · 0/6</span>
+</div>
+<p id="step-title" aria-live="polite">Ready to trace</p><p id="step-desc">Choose Send packet to animate the explanation, or Step to examine each stage.</p>
+</section>
+<section class="panel evidence"><div><h2 id="evidence-title">Redacted configuration illustration</h2>
+<a id="evidence-link" href="../evidence/hop-01-vnet.svg" target="_blank" rel="noopener noreferrer"><img id="evidence-image" src="../evidence/hop-01-vnet.svg" alt="Sanitized reconstruction of an Azure VNet subnet configuration"></a>
+<p class="fine">Click the illustration to open the larger view. All five evidence illustrations are explicitly reconstructed and omit precise values from the training tenant.</p></div>
+<div><h2>Configuration interpretation</h2><p id="finding">Select a stage to see its supported observation and role in the path.</p><h2>Trace log</h2><ol id="log" class="logs" aria-live="polite"><li>Idle · No packets simulated.</li></ol></div></section>
+<p class="footer">Independent educational reconstruction from Reader-level Azure training observations. Not a packet capture, not a copy of the course simulator, not an answer key. <a href="https://github.com/humblehungrylife/corlin-cybersecurity-analyst-journey/blob/main/PUBLICATION-POLICY.md">Publication policy</a>.</p>
+</main><script src="script.js"></script></body></html>
